@@ -11,12 +11,12 @@ Intended use: personal.
 
 Intended outcome: 	Ability to generate arbitrary (square, triangle, sawtooth, sine) waveforms. 
 
-					Should be able to select amplitude, frequency, offset.
+Should be able to select amplitude, frequency, offset.
 
 
 UI: Likely to be a basic display (have spare lcds)
 
-	Likely to use rotary encoders (potentially one encoder, and use buttons to select for amplitude/frequency/offset?)
+Likely to use rotary encoders (potentially one encoder, and use buttons to select for amplitude/frequency/offset?)
 
 
 This project is very much intended to be a simple self-learning project. 
