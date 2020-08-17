@@ -1,0 +1,24 @@
+Change Component Footprint: Designator=C9 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C11 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C13 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C14 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C16 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C19 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Change Component Footprint: Designator=C20 Old Footprint=CAPPR65-500-1600X1000X1700 New Footprint=CAPPR65-500-1600X1000X1700
+Added Component: Designator=T1(XFMR_14A-30-512)
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetJ3_2 Pin=T1-1
+Added Pin To Net: NetName=NetT_3 Pin=T1-3
+Added Pin To Net: NetName=NetT_3 Pin=T1-4
+Added Pin To Net: NetName=NetF1_1 Pin=T1-6
+Added Pin To Net: NetName=NetT_7 Pin=T1-7
+Added Pin To Net: NetName=GND Pin=T1-8
+Added Pin To Net: NetName=NetT_9 Pin=T1-9
+Added Pin To Net: NetName=NetT_11 Pin=T1-11
+Added Pin To Net: NetName=NetT_12 Pin=T1-12
+Change Net Name : Old Net Name=NetT_3 New Net Name=NetT1_3
+Change Net Name : Old Net Name=NetT_7 New Net Name=NetT1_7
+Change Net Name : Old Net Name=NetT_9 New Net Name=NetT1_9
+Change Net Name : Old Net Name=NetT_11 New Net Name=NetT1_11
+Change Net Name : Old Net Name=NetT_12 New Net Name=NetT1_12
+Added Member To Class: ClassName=Power Member=Component T1 14A-30-512

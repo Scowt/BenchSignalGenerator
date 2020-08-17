@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetJ2_1 Pin=U2-8
+Change Room Name: Old Name=RealTimeClock New Name=MCU
+Change Room Scope: Old Scope=InComponentClass('RealTimeClock') New Scope=InComponentClass('MCU')
+Change Room Name: Old Name=RFModule New Name=Power
+Change Room Scope: Old Scope=InComponentClass('RFModule') New Scope=InComponentClass('Power')
+Change Room Name: Old Name=Spare New Name=AD9834
+Change Room Scope: Old Scope=InComponentClass('Spare') New Scope=InComponentClass('AD9834')
