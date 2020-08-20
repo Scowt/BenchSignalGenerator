@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=+3.3 Pin=C22-1
+Added Pin To Net: NetName=GND Pin=C22-2
+Added Member To Class: ClassName=AD9834 Member=Component C22 C0603C103J5RAC7411

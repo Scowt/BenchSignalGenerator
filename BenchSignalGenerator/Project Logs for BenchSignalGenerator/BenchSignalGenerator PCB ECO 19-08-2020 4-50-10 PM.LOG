@@ -1,0 +1,18 @@
+Change Component Designator: OldDesignator=Amp. NewDesignator=P1
+Change Component Designator: OldDesignator=DAC1 NewDesignator=P3
+Change Component Designator: OldDesignator=DAC2 NewDesignator=P4
+Change Component Designator: OldDesignator=Gnd-A NewDesignator=P2
+Added Component: Designator=P?(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetP4_3 Pin=P?-2
+Added Pin To Net: NetName=NetP?_1 Pin=P?-1
+Added Pin To Net: NetName=NetP?_1 Pin=U4-2
+Added Pin To Net: NetName=NetP?_1 Pin=U9-18
+Added Net: Name=NetP?_1
+Added Pin To Net: NetName=NetP?_3 Pin=P?-3
+Added Pin To Net: NetName=NetP?_3 Pin=U4-4
+Added Pin To Net: NetName=NetP?_3 Pin=U9-17
+Added Net: Name=NetP?_3
+Added Member To Class: ClassName=MCU Member=Component P? Header 3

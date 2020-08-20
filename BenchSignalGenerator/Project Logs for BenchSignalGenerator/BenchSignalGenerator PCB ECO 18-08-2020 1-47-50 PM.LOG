@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetR3_1 Pin=R4-1
+Added Pin To Net: NetName=NetR1_1 Pin=R4-2
+Added Member To Class: ClassName=AD9834 Member=Component J2 1-1337543-0
+Added Member To Class: ClassName=AD9834 Member=Component R4 CRCW08051K00FKEB
