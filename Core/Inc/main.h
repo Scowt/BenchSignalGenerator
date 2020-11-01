@@ -32,7 +32,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "generate.h"
+#include "IODefs.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -52,31 +53,22 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+extern uint8_t GenerateWave(struct Parameters SignalParameters);
 
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Select_Pin GPIO_PIN_13
-#define Select_GPIO_Port GPIOC
-#define Power_Pin GPIO_PIN_14
-#define Power_GPIO_Port GPIOC
-#define Enter_Pin GPIO_PIN_15
-#define Enter_GPIO_Port GPIOC
-#define Phase_Pin GPIO_PIN_0
-#define Phase_GPIO_Port GPIOH
-#define Spare_Pin GPIO_PIN_1
-#define Spare_GPIO_Port GPIOH
-#define DebugLed_Pin GPIO_PIN_8
-#define DebugLed_GPIO_Port GPIOA
-#define Amplitude_Pin GPIO_PIN_5
-#define Amplitude_GPIO_Port GPIOB
-#define WaveType_Pin GPIO_PIN_8
-#define WaveType_GPIO_Port GPIOB
-#define Frequency_Pin GPIO_PIN_9
-#define Frequency_GPIO_Port GPIOB
+
+
 /* USER CODE BEGIN Private defines */
+#define STATE_SETUP			0
+#define STATE_WAKE			1
+#define STATE_WAKEOUT		2
+#define STATE_WAKECHANGE	3
+#define STATE_WAKEPAUSE		4
+
 
 /* USER CODE END Private defines */
 

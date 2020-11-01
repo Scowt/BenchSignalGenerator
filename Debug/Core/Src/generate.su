@@ -1,0 +1,2 @@
+generate.c:25:9:GenerateWave	48	static
+generate.c:95:9:SetupDDS	16	static

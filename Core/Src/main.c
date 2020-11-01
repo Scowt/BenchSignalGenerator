@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "generate.h"
 #include "adc.h"
 #include "dac.h"
 #include "i2c.h"
@@ -49,7 +50,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+	//SPI_HandleTypeDef hspi1;
+	SPI_HandleTypeDef hspi2;
+	DAC_HandleTypeDef hdac1;
+	DAC_HandleTypeDef hdac2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -70,7 +74,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint8_t State=STATE_SETUP;
+	struct Parameters SignalParameters;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -93,7 +98,7 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_I2C1_Init();
-  MX_SPI1_Init();
+  //MX_SPI1_Init();
   MX_SPI2_Init();
   MX_TIM2_Init();
   MX_USART1_UART_Init();
@@ -102,15 +107,45 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  //Rough plan:
+  //When the unit is powered on, a sine wave of 200 hertz and an amplitude of 1v is output.
+  //TODO set initial parameters
   /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+  State=STATE_WAKEOUT;
+  SignalParameters.Amplitude=1;
+  SignalParameters.Frequency=200;
+  SignalParameters.WaveType=1;	//TODO make this human readable
+
+  // CS pin should default high
+  HAL_GPIO_WritePin(DDS_CS_Port,DDS_CS_Pin,GPIO_PIN_SET);
+  HAL_GPIO_WritePin(DDS_ResetWave_Port,DDS_ResetWave_Pin,GPIO_PIN_SET);
+  //start DAC1 output1
+  HAL_DAC_Start(&hdac1, 1);
+  //start DAC1 output2
+  HAL_DAC_Start(&hdac1, 2);
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+	  //state machine
+	  switch (State)
+	  {
+		  case STATE_WAKEOUT:
+		  {
+			  GenerateWave(SignalParameters);
+		  }
+		  case STATE_WAKECHANGE:
+		  {
+			  	  ;
+		  }
+		  case STATE_WAKEPAUSE:
+		  {
+			  	  ;
+		  }
+		  default:
+		  {
+			  ;
+		  }
+	  }
   }
-  /* USER CODE END 3 */
 }
 
 /**
@@ -184,7 +219,7 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-
+	uint8_t wasted=0;
   /* USER CODE END Error_Handler_Debug */
 }
 
